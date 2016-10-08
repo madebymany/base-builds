@@ -1,5 +1,5 @@
-ENV DEBIAN_FRONTEND noninteractive
 FROM ubuntu:14.04
+ENV DEBIAN_FRONTEND noninteractive
 RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ trusty universe" | tee -a /etc/apt/sources.list
 RUN apt-get update -qq
 RUN apt-get install -qy --no-install-recommends dialog python-software-properties software-properties-common
