@@ -10,8 +10,7 @@ RUN add-apt-repository 'deb http://us.archive.ubuntu.com/ubuntu/ focal-updates u
 RUN add-apt-repository 'deb http://us.archive.ubuntu.com/ubuntu/ focal multiverse'
 RUN add-apt-repository 'deb http://us.archive.ubuntu.com/ubuntu/ focal-updates multiverse'
 RUN apt-get update -qq
-RUN apt-get install -qy --no-install-recommends curl git sudo make openssl python-pip build-essential gcc rsync apt-transport-https
+RUN apt-get install -qy --no-install-recommends curl git sudo make openssl build-essential gcc rsync apt-transport-https
 RUN echo "gem: --no-document --no-rdoc --no-ri" | tee /etc/gemrc
 RUN apt-get autoremove -yq
 RUN apt-get clean -yq
-
