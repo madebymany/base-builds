@@ -15,3 +15,5 @@ RUN apt-get install -qy --no-install-recommends curl git sudo make openssl pytho
 RUN echo "gem: --no-document --no-rdoc --no-ri" | tee /etc/gemrc
 RUN apt-get autoremove -yq
 RUN apt-get clean -yq
+
+# Trigger rebuild of bionic
